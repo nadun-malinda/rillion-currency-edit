@@ -1,5 +1,5 @@
 import { fetchHttp } from "@/shared/utils/fetchHttp";
-import type { ExchangeRateResponse, Currency } from "./schema";
+import type { ExchangeRateResponse } from "./schema";
 
 export async function fetchExchangeRates(): Promise<
   ExchangeRateResponse | Error
