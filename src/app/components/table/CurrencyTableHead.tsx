@@ -7,7 +7,7 @@ export function CurrencyTableHead() {
         {TABLE_HEAD.map((head, index) => (
           <th
             key={index}
-            className="border-b border-blue-gray-100 p-4 w-full bg-rl-green text-rl-luminus"
+            className="border-b border-blue-gray-100 px-3 py-4 w-full bg-rl-green text-rl-luminus"
           >
             <p className="leading-none font-semibold">{head}</p>
           </th>

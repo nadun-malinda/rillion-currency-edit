@@ -5,12 +5,16 @@ export async function CurrencyTableBody() {
   const exchangeRates = await fetchExchangeRates();
 
   if (exchangeRates instanceof Error) {
-    return <p>Something went wrong!</p>;
+    return <p className="p-4 text-center">Something went wrong!</p>;
+  }
+
+  if (Object.keys(exchangeRates).length === 0) {
+    return <p className="p-4 text-center">Nothing to show!</p>;
   }
 
   return (
     <>
-      <tbody className="flex flex-col items-center justify-between overflow-y-scroll w-full h-[80vh]">
+      <tbody className="flex flex-col items-center justify-between overflow-scroll w-full h-[90vh] lg:h-[80vh]">
         <CurrencyTableRows exchangeRates={exchangeRates.rates} />
       </tbody>
     </>
