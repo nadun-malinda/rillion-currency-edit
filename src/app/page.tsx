@@ -1,4 +1,4 @@
-import CurrencyTable from "./components/CurrencyTable";
+import CurrencyTable from "./components/table/CurrencyTable";
 
 export default function Home() {
   return (
