@@ -12,6 +12,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "rl-green": "#0f3732",
+        "rl-luminus": "#32ffbe",
       },
     },
   },
