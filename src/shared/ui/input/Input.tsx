@@ -32,6 +32,7 @@ export function Input({
       inputMode={inputMode}
       value={value}
       size={size}
+      className="text-base"
       onChange={onChange}
       defaultValue={defaultValue}
       onPointerEnterCapture={undefined}
