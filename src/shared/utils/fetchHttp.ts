@@ -1,12 +1,20 @@
+/**
+ * Generic type representing a successful HTTP fetch response.
+ *
+ * @template T
+ */
 type FetchHttpSuccess<T = unknown> = T;
 
 /**
- * Sends an HTTP request using the Fetch API and returns the parsed JSON response or an error object.
+ * Performs an HTTP fetch request and returns either the parsed JSON response
+ * or an error if the request fails.
  *
- * @template T - The expected type of the successful response. Defaults to `unknown`.
- * @param {RequestInfo | URL} input - The input, which can be a URL string or a Request object.
- * @param {RequestInit} [init] - Optional init configuration for the Fetch request, such as method, headers, and body.
- * @returns {Promise<T | Error>} A promise that resolves to the parsed JSON data of type `T` if the request is successful, or a `Error` object if an error occurs.
+ * @template T
+ * @param {RequestInfo | URL} input - The resource to fetch, which can be a URL string or a Request object.
+ * @param {RequestInit} [init] - An optional configuration object for the request.
+ * @returns {Promise<FetchHttpSuccess<T> | Error>} A promise that resolves to the parsed JSON data on success, or an error on failure.
+ *
+ * @throws {Error} Throws an error if the network request fails or if the response is not OK.
  */
 export async function fetchHttp<T = unknown>(
   input: RequestInfo | URL,

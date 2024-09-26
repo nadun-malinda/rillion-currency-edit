@@ -50,7 +50,7 @@ function Header({
       placeholder={undefined}
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className={`box-content bg-rl-green overflow-hidden text-rl-luminus min-h-8 justify-center rounded-t-2xl font-bold ${
+      className={`box-content text-2xl bg-rl-green overflow-hidden text-rl-luminus min-h-8 justify-center rounded-t-2xl font-bold ${
         className ?? ""
       }`}
     >

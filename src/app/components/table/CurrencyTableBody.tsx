@@ -1,6 +1,13 @@
 import { fetchExchangeRates } from "@/shared/data/currency/fetchExchangeRates";
 import { CurrencyTableRows } from "./CurrencyTableRows";
 
+/**
+ * CurrencyTableBody component asynchronously fetches currency exchange rates
+ * and displays them in a table body. If the data cannot be fetched or is empty,
+ * appropriate messages are displayed.
+ *
+ * @returns {JSX.Element} The table body with rows of currency exchange rates or a message.
+ */
 export async function CurrencyTableBody() {
   const exchangeRates = await fetchExchangeRates();
 
