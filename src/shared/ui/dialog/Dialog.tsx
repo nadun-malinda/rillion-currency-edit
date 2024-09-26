@@ -30,7 +30,7 @@ export function Dialog({
       placeholder={undefined}
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className={`rounded-2xl ${className}`}
+      className={`rounded-2xl overflow-hidden ${className}`}
       size={size}
     >
       {children}
@@ -50,7 +50,7 @@ function Header({
       placeholder={undefined}
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className={`box-content min-h-8 justify-center rounded-t-2xl text-title-large font-bold text-on-surface-variant lg:px-kv04 lg:pt-kv03 ${
+      className={`box-content bg-rl-green overflow-hidden text-rl-luminus min-h-8 justify-center rounded-t-2xl font-bold ${
         className ?? ""
       }`}
     >
@@ -71,7 +71,7 @@ function Body({
       placeholder={undefined}
       onPointerEnterCapture={undefined}
       onPointerLeaveCapture={undefined}
-      className={`bg-surface-variant lg:px-kv04 lg:py-kv03 ${className}`}
+      className={className}
     >
       {children}
     </MTDialogBody>

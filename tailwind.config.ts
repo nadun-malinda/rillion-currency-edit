@@ -13,6 +13,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         "rl-green": "#0f3732",
+        "rl-light-green": "#d8eee5",
         "rl-luminus": "#32ffbe",
       },
     },

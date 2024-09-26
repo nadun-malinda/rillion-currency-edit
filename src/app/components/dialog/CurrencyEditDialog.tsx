@@ -35,7 +35,7 @@ export function CurrencyEditDialog({
     <Dialog isOpen={open} onClose={() => setOpen(!open)}>
       <Dialog.Header>{selectedCurrency?.name}</Dialog.Header>
       <Dialog.Body>
-        <div>
+        <div className="pt-4">
           <Input
             size="lg"
             label="Value"
