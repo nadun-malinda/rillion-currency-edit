@@ -14,7 +14,7 @@ export async function CurrencyTableBody() {
 
   return (
     <>
-      <tbody className="flex flex-col items-center justify-between overflow-scroll w-full h-[90vh] lg:h-[80vh]">
+      <tbody className="items-center justify-between overflow-scroll w-full h-[90vh] lg:h-[80vh]">
         <CurrencyTableRows exchangeRates={exchangeRates.rates} />
       </tbody>
     </>

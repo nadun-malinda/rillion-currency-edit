@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { CurrencyEditDialog } from "../dialog/CurrencyEditDialog";
 import type { Currency, Rate } from "@/shared/data/currency/schema";
+import { IconButton } from "@/shared/ui/button/IconButton";
+import Image from "next/image";
 
 interface CurrencyTableRowProps {
   exchangeRates: Rate;
@@ -33,24 +35,34 @@ export function CurrencyTableRows({ exchangeRates }: CurrencyTableRowProps) {
     <>
       {Object.keys(rates).map((unitCode, index) => {
         const { name, unit, value, type } = rates[unitCode];
+        const tdClass = "px-3 py-2 border-b border-rl-green/30";
 
         return (
-          <tr className="flex w-full" key={index}>
-            <td className="p-3 border-b border-blue-gray-50 w-full">
-              <p className="font-bold">{name}</p>
+          <tr key={index}>
+            <td className={tdClass}>
+              <p className="font-bold text-black">{name}</p>
             </td>
-            <td className="p-3 border-b border-blue-gray-50 w-full">
+            <td className={tdClass}>
               <p className="font-normal">{unit}</p>
             </td>
-            <td className="p-3 border-b border-blue-gray-50 w-full">
-              <div className="flex gap-1 justify-between">
+            <td className={`${tdClass} bg-rl-light-green/50`}>
+              <div className="flex gap-1 items-center justify-between">
                 <p className="font-normal">{value}</p>
-                <button className="pr-4" onClick={() => handleEdit(unitCode)}>
-                  Edit
-                </button>
+                <IconButton
+                  variant="outlined"
+                  size="sm"
+                  onClick={() => handleEdit(unitCode)}
+                >
+                  <Image
+                    src="/images/pencil.svg"
+                    width={16}
+                    height={16}
+                    alt="edit icon"
+                  />
+                </IconButton>
               </div>
             </td>
-            <td className="p-3 border-b border-blue-gray-50 w-full">
+            <td className={tdClass}>
               <p className="font-medium">{type}</p>
             </td>
           </tr>

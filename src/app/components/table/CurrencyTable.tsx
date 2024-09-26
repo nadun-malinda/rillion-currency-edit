@@ -4,8 +4,8 @@ import { CurrencyTableHead } from "./CurrencyTableHead";
 
 export default function CurrencyTable() {
   return (
-    <Card className="h-full w-full overflow-scroll">
-      <table className="text-left w-full">
+    <Card className="h-full w-full overflow-hidden">
+      <table className="text-left w-full relative">
         <CurrencyTableHead />
         <CurrencyTableBody />
       </table>
